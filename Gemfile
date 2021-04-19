@@ -56,3 +56,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :development do
   gem 'rubocop', require: false
 end
+
+gem 'active_hash'
+# Active_Hashを用いることで、モデルファイルに直接記述した変更されないデータに対して、ActiveRecordのようなメソッドを用いることができる
+# ex)都道府県名一覧やカテゴリーなど「基本的に変更されないデータ
