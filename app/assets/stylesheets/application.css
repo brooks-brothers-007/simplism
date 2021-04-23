@@ -1,15 +1,111 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+/* リセットCSS */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+ul,
+li,
+h1,
+h2,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
+  color: #3b4043;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  color: #3b4043;
+}
+
+/* header */
+
+.sight_name {
+  display: flex;
+  min-width: 200px;
+  font-size: 40px;
+  justify-content:space-between
+}  
+
+.sight_sub_name {
+  display: flex;
+  min-width: 150px;
+  font-size: 20px;
+  justify-content:space-around
+}  
+
+.lists-center {
+  display: flex;
+  list-style: none;
+  font-size: 20px;
+  justify-content: center;
+  margin-right: 2ex;
+}
+
+.lists-right {
+    display: flex;
+    list-style: none;
+    font-size: 20px;
+    justify-content:flex-end;
+}
+
+.logo {
+  display: flex;justify-content: space-around;
+  width: 500px;
+}  
+
+.logo2 {
+  display: flex;justify-content: space-around;
+  width: 700px;
+}  
+
+.logo3 {
+  display: flex;justify-content: space-around;
+  width: 800px;
+}  
+
+.user-nickname {
+  text-decoration: none; 
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold;
+}
+
+
+.logout {
+  text-decoration: none;
+  color: #333333;
+}
+
+.login {
+  text-decoration: none;
+  line-height: 3px;
+  margin-right: 3vw;
+  color: #333333;
+}
+
+.sign-up {
+  text-decoration: none;
+  color: #333333;
+}
+
+/*プルダウンメニューを画面上から見えないように実装する為*/
+.hidden{
+  display: none;
+}

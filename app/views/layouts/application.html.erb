@@ -1,12 +1,15 @@
-<link rel="stylesheet" href="simple_first.css">
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="simple_first.css">
+    <%# cssを読み込む記述 %>
+    <script src="index.js"></script>
+    <%# jsを読み込む記述 %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simplism</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-       <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
   </head>
@@ -14,27 +17,51 @@
   <header>
     <div class="sight_name"> 
       <b>
-        <%= link_to "Simplism" %>
+        <%= link_to "Simplism", class: :sight_name%>
       </b>
       <div class='lists-right'>
         <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
         <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
       </div> 
-    </div>   
-    <ul class='lists-center'>
-    <b>
-      <li><%= link_to "MySize ASSIST", class: :size %></li>
-      <li><%= link_to 'カテゴリー', class: :category %></li>
-      <li><%= link_to 'ブランド', class: :brand %></li> 
-    </b>  
-    </ul> 
-    <ul class='lists-right'>
-      <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-      <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-    </ul> 
-        
+    </div>
+
+    <div class="lists-center"> 
+        <%= link_to "MySize ASSIST", class: :size%>
+        <select class="my_size" name="article[category_id]" id="article_category_id">
+          <option value="1">--</option>
+          <option value="2">160未満</option>
+          <option value="3">161〜165</option>
+          <option value="4">166〜170</option>
+          <option value="5">171〜175</option>
+          <option value="5">176〜180</option>
+          <option value="6">181以上</option>
+        </select>
+      
+        <%= link_to "カテゴリー" %>
+        <select class="category" name="article[category_id]" id="article_category_id">
+          <option value="1">--</option>
+          <option value="2">アウター</option>
+          <option value="3">トップス</option>
+          <option value="4">パンツ</option>
+          <option value="5">シューズ</option>
+          <option value="6">雑貨</option>
+        </select>
+      
+        <%= link_to 'ブランド', class: :brand %> 
+        <select class="brand" name="article[category_id]" id="article_category_id">
+          <option value="1">--</option>
+          <option value="2">nano universe</option>
+          <option value="3">united arrows</option>
+          <option value="4">journal standerd</option>
+          <option value="5">urban reserech</option>
+          <option value="6">beams</option>
+        </select>
+    </div>     
+
     <div class="top">
-      <%= link_to image_tag("top.png", class: :logo), root_path %> 
+      <%= link_to image_tag("simplism.jpg",  class: :logo), root_path %> 
+      <%= link_to image_tag("nano.jpg",  class: :logo2), root_path %> 
+      <%= link_to image_tag("top.png",  class: :logo3), root_path %> 
     </div>  
       
   </header>   
