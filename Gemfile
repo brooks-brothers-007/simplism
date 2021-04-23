@@ -63,3 +63,5 @@ gem 'active_hash'
 
 gem 'devise'
 # ユーザー管理機能を簡単に実装するためのGem
+
+gem 'pry-rails'
